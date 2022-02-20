@@ -203,8 +203,8 @@ nav {
 
 .article-item img {
     max-width: 100%;
-    height: auto;
-    /* height: 100%; */
+    /* height: auto; */
+    height: 100%;
 }
 
 .article-info {
@@ -574,7 +574,6 @@ footer {
 
     .account-links li {
         font-size: 1rem;
-
     }
 
     .hero {
@@ -589,6 +588,11 @@ footer {
         font-size: 1.5rem;
     }
 
+    .article-info {
+        left: 10px;
+        bottom: 10px;
+    }
+
     .article-grid {
         grid-template-columns: 1fr;
     }
@@ -598,7 +602,7 @@ footer {
     }
 
     .article-grid div:nth-child(3) .article-info .article-title h3 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .article-title h3 {
