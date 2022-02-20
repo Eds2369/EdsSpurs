@@ -420,7 +420,10 @@ footer {
 
 .legal-links ul {
     display: flex;
-    gap: 15px;
+}
+
+.legal-links ul li {
+    margin: 0 5px
 }
 
 /* FOOTER END */
@@ -487,7 +490,7 @@ footer {
     }
 
     .account-links {
-        margin-top: 32px;
+        margin-top: 10px;
     }
 
     .account-links li {
@@ -551,11 +554,11 @@ footer {
 
     .site-links ul {
         flex-direction: column;
-        gap: 20px;
     }
 
     .site-links ul li {
         border: none;
+        margin-bottom: 20px;
     }
 }
 
@@ -619,10 +622,13 @@ footer {
     }
 
     .legal-links ul {
-        gap: 15px;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+    }
+
+    .legal-links ul li {
+        margin: 5px;
     }
 }
 
