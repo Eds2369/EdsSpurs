@@ -593,10 +593,6 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    /* .article-item {
-        max-height: 180px;
-    } */
-
     .article-grid div:nth-child(3) {
         grid-column: unset;
     }
@@ -606,7 +602,7 @@ footer {
     }
 
     .article-title h3 {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     .logo-sponsors-normal {
