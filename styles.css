@@ -1,0 +1,635 @@
+:root {
+    --main-color: #ffffff;
+    --secondary-color: #111836;
+    --third-color: #3db7e4;
+    --main-font-color: rgb(0, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Gowun Dodum', sans-serif;
+    background-color: var(--main-color);
+    font-size: 16px;
+    color: var(--main-font-color);
+    height: 100%;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.container-header {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--secondary-color);
+    border-bottom: 4px solid var(--third-color);
+    color: white;
+    display: block;
+    font-size: 1.2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    max-width: 25px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.nav-links .nav-list {
+    margin: 0 auto;
+}
+
+.nav-list li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.account-links li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.account-links li:nth-child(2) {
+    border: 2px solid var(--third-color);
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.account-links li:nth-child(2):hover {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+
+.nav-list, .account-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+} 
+
+.mobile-nav-btn {
+    display: none;
+}
+
+.mobile-close-btn {
+    display: none;
+}
+
+.mobile-second-nav {
+    display: none;
+}
+
+/* HEADER END */
+
+
+/* HERO */
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/tottenham-hotspur-stadium.jpg");
+    max-width: 1600px;
+    margin: auto;
+    height: 80%;
+    background-position: 25% 75%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.hero-text a {
+    color: var(--main-color);
+    font-size: 1.25rem;
+    background-color: var(--third-color);
+    padding: 3px 6px;
+}
+
+/* HERO END */
+
+
+
+/* LATEST NEWS / GRID */
+
+.news-header {
+    font-size: 3rem;
+}
+
+.article-grid {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+    margin-bottom: 3px;
+}
+
+.article-grid div:nth-child(3) {
+    grid-column: 1/3;
+}
+
+.article-grid div:nth-child(3) .article-info .article-title h3 {
+    font-size: 4rem;
+}
+
+.article-grid div:nth-child(3) .article-info .article-title h3:hover {
+    text-decoration: underline;
+}
+
+.article-image-overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+.article-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.article-item img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.article-info {
+    color: var(--main-color);
+    position: absolute;
+    left: 26px;
+    bottom: 30px;
+    z-index: 10;
+}
+
+.article-tags a {
+    color: var(--third-color)
+}
+
+.article-tags a:hover {
+    text-decoration: underline;
+}
+
+.article-title h3 {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.article-title h3:hover {
+    text-decoration: underline;
+}
+
+/* LATEST NEWS / GRID END */
+
+
+
+
+/* UPCOMING MATCHES */
+
+.matches-container {
+    margin-bottom: 30px;
+}
+
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+}
+
+.matches-grid .match-grid-item:nth-child(1) {
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+
+.match-grid-item {
+    background-color: var(--third-color);
+    color: var(--main-color);
+    text-align: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+.match-grid-item a {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.team-matchup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.team-matchup .team-icon {
+    width: 55px;
+}
+
+.team-matchup .team-icon img {
+    width: 100%;
+}
+
+.match-grid-item:nth-child(2) .match-location,
+.match-grid-item:nth-child(3) .match-location {
+    padding: 10px 0 40px;
+}
+
+/* UPCOMING MATCHES END */
+
+
+
+/* FOOTER */
+
+footer {
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.sponsors {
+    padding: 40px 0;
+}
+
+.logo-sponsors-big {
+    display: flex;
+}
+
+.logo-sponsors-big .sponsor-big {
+    flex: 1;
+    text-align: center;
+}
+
+.logo-sponsors-big .sponsor-big a {
+    max-width: 150px;
+    max-height: 90px;
+}
+
+.logo-sponsors-big .sponsor-big a img {
+    max-width: 150px;
+    max-height: 90px;
+}
+
+.logo-sponsors-normal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.logo-sponsors-normal .sponsor-normal {
+    text-align: center;
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-sponsors-normal .sponsor-normal a {
+    max-width: 100px;
+}
+
+.logo-sponsors-normal .sponsor-normal a img {
+    width: 100%;
+    max-width: 130px;
+}
+
+.socials {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.socials i {
+    font-size: 45px;
+    color: var(--secondary-color);
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.site-links {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.site-links a {
+    color: var(--main-color);
+}
+
+.site-links ul {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 40px;
+}
+
+.site-links ul li:nth-child(1) {
+    border: none;
+}
+
+.site-links ul li {
+    border-left: 1px solid white;
+    padding: 0 1em;
+}
+
+.legal-links {
+    background-color: #0b0e1e;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.legal-links a {
+    color: #999;
+}
+
+.legal-links ul {
+    display: flex;
+    gap: 15px;
+}
+
+/* FOOTER END */
+
+@media (max-width: 1024px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-nav-btn {
+        display: block;
+    }
+
+    .mobile-close-btn {
+        display: block;
+    }
+
+    .nav-links.show {
+        display: block;
+        padding: 2rem;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        overflow-y: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+        background-color: rgba(61,183,228, 0.92);
+    }
+
+    .nav-list, .mobile-second-nav {
+        flex-direction: column;
+        align-items: start;
+        font-size: 3rem;
+        font-weight: bold;
+        gap: unset;
+    }
+
+    .nav-list li:nth-child(1){
+        color: var(--main-color);
+        font-size: 2rem;
+        font-weight: bolder;
+        align-self: end;
+    }
+
+    .mobile-second-nav {
+        display: block;
+        margin-top: 32px;
+    }
+
+    .mobile-second-nav li:hover {
+        text-decoration: underline;
+    }
+
+    .hero-text {
+        width: 75%;
+    }
+
+    .article-info {
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .account-links {
+        margin-top: 32px;
+    }
+
+    .account-links li {
+        font-size: 2rem;
+        background-color: var(--secondary-color);
+        padding: 5px 15px;
+        border: none;
+    }
+}
+
+@media (max-width: 906px) {
+    .article-title h3 {
+        font-size: 2rem;
+    }
+
+    .logo-sponsors-big .sponsor-big {
+        flex-grow: 1;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .article-title h3 {
+        font-size: 1.75rem;
+    }
+
+    .article-grid div:nth-child(3) .article-info .article-title h3 {
+        font-size: 3rem;
+    }
+
+    .matches-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .match-grid-item:nth-child(1) .match-location {
+        margin-bottom: 40px;
+    }
+
+    .logo-sponsors-big {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .socials {
+        flex-wrap: wrap;
+    }
+
+    .site-links {
+        font-size: 1.25rem;
+    }
+
+    .site-links ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .site-links ul li {
+        border: none;
+    }
+}
+
+@media (max-width: 540px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .nav-links.show {
+        padding: 1rem;
+    }
+
+    .nav-list, .mobile-second-nav {
+        font-size: 2rem;
+    }
+
+    .account-links li {
+        font-size: 1rem;
+
+    }
+
+    .hero {
+        height: 95%;
+    }
+
+    .hero-text {
+        width: 90%;
+    }
+
+    .container-header {
+        font-size: 1.5rem;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-grid div:nth-child(3) {
+        grid-column: unset;
+    }
+
+    .article-grid div:nth-child(3) .article-info .article-title h3 {
+        font-size: 1.5rem;
+    }
+
+    .article-title h3 {
+        font-size: 1rem;
+    }
+
+    .logo-sponsors-normal {
+        gap: 20px;
+    }
+
+    .logo-sponsors-normal .sponsor-normal {
+        width: unset;
+    }
+
+    .legal-links ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+/* FOR SMALL SCREENS
+.logo-sponsors-big {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo-sponsors-big .sponsor-big {
+    flex-grow: 1;
+    width: 50%;
+    text-align: center;
+}
+*/
