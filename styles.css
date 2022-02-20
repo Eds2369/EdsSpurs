@@ -592,6 +592,10 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .article-item {
+        max-height: 335px;
+    }
+
     .article-grid div:nth-child(3) {
         grid-column: unset;
     }
