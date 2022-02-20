@@ -203,7 +203,7 @@ nav {
 
 .article-item img {
     max-width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .article-info {
@@ -592,9 +592,9 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .article-item {
-        max-height: 335px;
-    }
+    /* .article-item {
+        max-height: 180px;
+    } */
 
     .article-grid div:nth-child(3) {
         grid-column: unset;
