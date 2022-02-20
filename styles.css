@@ -198,7 +198,7 @@ nav {
 .article-item {
     position: relative;
     width: 100%;
-    min-height: 180px;
+    /* min-height: 180px; */
 }
 
 .article-item img {
